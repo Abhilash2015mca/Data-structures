@@ -12,14 +12,12 @@ struct node *head;
   
 void main ()  
 {  
-    int choice=0;     
-    printf("\n*********Stack operations using linked list*********\n");  
-    printf("\n----------------------------------------------\n");  
+    int choice=0;       
     while(choice != 4)  
     {  
         printf("\n\nChose one from the below options...\n");  
         printf("\n1.Push\n2.Pop\n3.Show\n4.Exit");  
-        printf("\n Enter your choice \n");        
+        printf("\n Enter your choice = ");        
         scanf("%d",&choice);  
         switch(choice)  
         {  
@@ -60,7 +58,7 @@ void push ()
     }  
     else   
     {  
-        printf("Enter the value");  
+        printf("Enter the value = ");  
         scanf("%d",&val);  
         if(head==NULL)  
         {         

@@ -20,13 +20,11 @@ void main ()
 int choice =0;  
     while(choice != 9)  
     {  
-        printf("\n*********Main Menu*********\n");  
-        printf("\nChoose one option from the following list ...\n");  
-        printf("\n===============================================\n");  
-        printf("\n1.Insert in begining\n2.Insert at last\n3.Insert at any random location\n4.Delete from Beginning\n  
-        5.Delete from last\n6.Delete the node after the given data\n7.Search\n8.Show\n9.Exit\n");  
-        printf("\nEnter your choice?\n");  
-        scanf("\n%d",&choice);  
+        printf("\n*********Main Menu*********");  
+        printf("\nChoose one option from the following list");  
+        printf("\n1.Insert in begining 2.Insert at last 3.Insert at any random location 4.Delete from Beginning 5.Delete from last 6.Delete the node after the given data 7.Search 8.Show 9.Exit");  
+        printf("\nEnter your choice? = ");  
+        scanf("%d",&choice);  
         switch(choice)  
         {  
             case 1:  
@@ -72,7 +70,7 @@ void insertion_beginning()
    }  
    else  
    {  
-    printf("\nEnter Item value");  
+    printf("Enter Item value = ");  
     scanf("%d",&item);  
       
    if(head==NULL)  
@@ -90,7 +88,7 @@ void insertion_beginning()
        head->prev=ptr;  
        head=ptr;  
    }  
-   printf("\nNode inserted\n");  
+   printf("Node inserted");  
 }  
      
 }  
@@ -101,11 +99,11 @@ void insertion_last()
    ptr = (struct node *) malloc(sizeof(struct node));  
    if(ptr == NULL)  
    {  
-       printf("\nOVERFLOW");  
+       printf("OVERFLOW");  
    }  
    else  
    {  
-       printf("\nEnter value");  
+       printf(" Enter value = ");  
        scanf("%d",&item);  
         ptr->data=item;  
        if(head == NULL)  
@@ -127,7 +125,7 @@ void insertion_last()
           }  
              
        }  
-     printf("\nnode inserted\n");  
+     printf("node inserted");  
     }  
 void insertion_specified()  
 {  
@@ -141,7 +139,7 @@ void insertion_specified()
    else  
    {  
        temp=head;  
-       printf("Enter the location");  
+       printf("Enter the location = ");  
        scanf("%d",&loc);  
        for(i=0;i<loc;i++)  
        {  
@@ -152,7 +150,7 @@ void insertion_specified()
                return;  
            }  
        }  
-       printf("Enter value");  
+       printf("Enter value = ");  
        scanf("%d",&item);  
        ptr->data = item;  
        ptr->next = temp->next;  
@@ -173,7 +171,7 @@ void deletion_beginning()
     {  
         head = NULL;   
         free(head);  
-        printf("\nnode deleted\n");  
+        printf("\nnode deleted");  
     }  
     else  
     {  
@@ -181,7 +179,7 @@ void deletion_beginning()
         head = head -> next;  
         head -> prev = NULL;  
         free(ptr);  
-        printf("\nnode deleted\n");  
+        printf("\nnode deleted");  
     }  
   
 }  
@@ -196,7 +194,7 @@ void deletion_last()
     {  
         head = NULL;   
         free(head);   
-        printf("\nnode deleted\n");  
+        printf("\nnode deleted");  
     }  
     else   
     {  
@@ -207,7 +205,7 @@ void deletion_last()
         }  
         ptr -> prev -> next = NULL;   
         free(ptr);  
-        printf("\nnode deleted\n");  
+        printf("\nnode deleted");  
     }  
 }  
 void deletion_specified()  
@@ -221,7 +219,7 @@ void deletion_specified()
     ptr = ptr -> next;  
     if(ptr -> next == NULL)  
     {  
-        printf("\nCan't delete\n");  
+        printf("\nCan't delete");  
     }  
     else if(ptr -> next -> next == NULL)  
     {  
@@ -233,13 +231,13 @@ void deletion_specified()
         ptr -> next = temp -> next;  
         temp -> next -> prev = ptr;  
         free(temp);  
-        printf("\nnode deleted\n");  
+        printf("\nnode deleted");  
     }     
 }  
 void display()  
 {  
     struct node *ptr;  
-    printf("\n printing values...\n");  
+    printf("\n printing values...");  
     ptr = head;  
     while(ptr != NULL)  
     {  
@@ -254,11 +252,11 @@ void search()
     ptr = head;   
     if(ptr == NULL)  
     {  
-        printf("\nEmpty List\n");  
+        printf("\nEmpty List");  
     }  
     else  
     {   
-        printf("\nEnter item which you want to search?\n");   
+        printf("\nEnter item which you want to search?");   
         scanf("%d",&item);  
         while (ptr!=NULL)  
         {  
@@ -277,7 +275,7 @@ void search()
         }  
         if(flag==1)  
         {  
-            printf("\nItem not found\n");  
+            printf("\nItem not found");  
         }  
     }     
           
